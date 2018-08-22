@@ -12,7 +12,7 @@ public class MyDemoApplication {
 	public static void main(String[] args) {
 		
 		// start embedded zookeeper server
-		new EmbeddedZooKeeper(2181, false).start();
+		new EmbeddedZooKeeper(8181, false).start();
 
 		
 		SpringApplication.run(MyDemoApplication.class, args);
