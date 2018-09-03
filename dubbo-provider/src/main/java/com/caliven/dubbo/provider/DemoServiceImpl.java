@@ -1,9 +1,11 @@
 package com.caliven.dubbo.provider;
 
 import com.caliven.dubbo.api.DemoService;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
-@Service("demoService")
+@Component
+@Service
 public class DemoServiceImpl implements DemoService {
 
 

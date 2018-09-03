@@ -17,6 +17,11 @@
     <dubbo:protocol name="dubbo" port="20880"/>
 
     <!-- 声明需要暴露的服务接口 -->
+    <!--
     <dubbo:service interface="com.caliven.dubbo.api.DemoService" ref="demoService"/>
+    -->
+
+    <!-- 使用注解方式暴露接口 -->
+    <dubbo:annotation package="com.caliven.dubbo.provider"/>
 
 </beans>
