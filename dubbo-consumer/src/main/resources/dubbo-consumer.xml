@@ -13,11 +13,10 @@
     <dubbo:registry protocol="zookeeper" address="zookeeper://127.0.0.1:2181"/>
 
     <!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
-    <!--
+    <!-- check=false关闭检查，服务不可用时会抛出异常，阻止 Spring 初始化完成，以便上线时，能及早发现问题，默认 check="true"-->
     <dubbo:reference id="demoService" interface="com.caliven.dubbo.api.DemoService"/>
-    -->
 
-    <!-- 使用注解方式暴露接口 -->
-    <dubbo:annotation package="com.caliven.dubbo.api"/>
+    <!-- 使用注解方式暴露接口，dubbo:annotation 2.5.7版本后已弃用-->
+    <!--<dubbo:annotation package="com.caliven.dubbo.api"/>-->
 
 </beans>
