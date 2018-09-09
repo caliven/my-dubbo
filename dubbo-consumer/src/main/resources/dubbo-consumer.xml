@@ -14,7 +14,9 @@
 
     <!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
     <!-- check=false关闭检查，服务不可用时会抛出异常，阻止 Spring 初始化完成，以便上线时，能及早发现问题，默认 check="true"-->
-    <dubbo:reference id="demoService" interface="com.caliven.dubbo.api.DemoService"/>
+    <dubbo:reference id="demoService" interface="com.caliven.dubbo.api.DemoService" />
+    <!-- 配置服务提供者dubbo服务url可以绕过注册中心直连提供者，避免在线上环境使用直连功能-->
+    <!--<dubbo:reference id="demoService" interface="com.caliven.dubbo.api.DemoService" url="dubbo://localhost:20880"/>-->
 
     <!-- 使用注解方式暴露接口，dubbo:annotation 2.5.7版本后已弃用-->
     <!--<dubbo:annotation package="com.caliven.dubbo.api"/>-->

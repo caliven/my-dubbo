@@ -9,11 +9,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoConsumerController {
 
-    @Reference(
+    /*@Reference(
             version = "${consumer.service.version}",
             application = "${dubbo.application.id}",
             url = "dubbo://localhost:28080"
-    )
+    )*/
+    @Reference
     private DemoService demoService;
 
     @RequestMapping("/sayHello")
