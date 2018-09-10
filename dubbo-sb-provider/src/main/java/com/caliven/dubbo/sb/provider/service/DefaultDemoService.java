@@ -12,12 +12,12 @@ import com.caliven.dubbo.api.DemoService;
 public class DefaultDemoService implements DemoService {
 
     @Override
-    public String sayHello(String name) {
+    public String sayHello(String name) {/*
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
         return "Hello Dubbo, " + name + " (from Spring Boot)";
     }
 
